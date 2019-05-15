@@ -8,7 +8,7 @@ export const table = (periods) => `
                         const day = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'][date.getUTCDay()]
 
                         return `
-                            <th colspan="${Rep.length + 1}" class="table-header-day">
+                            <th colspan="${Rep.length}" class="table-header-day">
                                 ${day}
                             </th>
                         `;

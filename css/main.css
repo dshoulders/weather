@@ -1,0 +1,26 @@
+html {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 15px;
+}
+
+#forcast-filter {
+    display: flex;
+}
+
+#location-selector {
+    padding: 6px 0px;
+}
+
+#forcast {
+    margin-top: 15px;
+}
+
+.table-header-day {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 6px;
+}

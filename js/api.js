@@ -10,3 +10,23 @@ export const fetchLocations = async () => {
 
     return parsedJSON.Locations.Location;
 };
+
+export const fetchSitePeriods = async (locationId) => {
+    
+    const response = await fetch(`${API_BASE_URL}/${locationId}?res=3hourly&key=${API_KEY}`);
+    const parsedJSON = await response.json();
+
+    return { 
+        periods: parsedJSON.SiteRep.DV.Location.Period,
+        params: parsedJSON.SiteRep.Wx.Param,
+    };
+};
+
+export const fetchRegionalForcast = async (locationId) => {
+    
+    const response = await fetch(`http://datapoint.metoffice.gov.uk/public/data/txt/wxfcs/regionalforecast/json/513?key=${API_KEY}`);
+    const parsedJSON = await response.json();
+
+    return { 
+    };
+};

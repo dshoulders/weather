@@ -1,3 +1,6 @@
+import { fetchSitePeriods, fetchRegionalForcast } from './api.js';
+import { table } from './templates.js';
+
 const $ = document.querySelector.bind(document);
 
 export const populateLocationSelector = locations => {
@@ -14,6 +17,28 @@ export const populateLocationSelector = locations => {
 export const attachButtonListener = () => {
     const button = $('#submit-selection');
     button.addEventListener('click', () => {
+        const selectedSiteId = $('#location-selector').value;
 
+        fetchSitePeriods(selectedSiteId).then(displaySitePeriods);
+        fetchRegionalForcast(selectedSiteId).then(displayRegionalForcast);
     });
+}
+
+export const setBackground = photoId => {
+    const html = $('html');
+
+    html.style.backgroundImage = 'url("images/cloudy.jpg")'
+}
+
+const displaySitePeriods = ({ params, periods }) => {
+    const forcast = $('#forcast');
+
+
+    const tableHTML = table(periods);
+
+    forcast.innerHTML = tableHTML;
+}
+
+const displayRegionalForcast = ({ params, periods }) => {
+
 }

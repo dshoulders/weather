@@ -8,19 +8,31 @@ body {
     margin: 15px;
 }
 
-#forcast-filter {
+td, th {
+    background: #fff;
+    padding: 10px;
+}
+
+.forcast-filter {
     display: flex;
 }
 
-#location-selector {
+.location-selector {
     padding: 6px 0px;
 }
 
-#forcast {
+.forcast {
     margin-top: 15px;
 }
 
 .table-header-day {
     background: rgba(255, 255, 255, 0.5);
     padding: 6px;
+}
+
+.table-cell-temp, 
+.table-cell-rain,
+.table-cell-icon {
+    text-align: center;
+    font-size: 14px;
 }

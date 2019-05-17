@@ -21,12 +21,3 @@ export const fetchSitePeriods = async (locationId) => {
         params: parsedJSON.SiteRep.Wx.Param,
     };
 };
-
-export const fetchRegionalForcast = async (locationId) => {
-    
-    const response = await fetch(`http://datapoint.metoffice.gov.uk/public/data/txt/wxfcs/regionalforecast/json/513?key=${API_KEY}`);
-    const parsedJSON = await response.json();
-
-    return { 
-    };
-};

@@ -1,6 +1,5 @@
-
-import { API_KEY } from './secrets.js';
-
+const urlParams = new URLSearchParams(window.location.search);
+const API_KEY = urlParams.get('key');
 const API_BASE_URL = 'http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json';
 
 export const fetchLocations = async () => {

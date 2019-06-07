@@ -1,3 +1,4 @@
 export const filterDevonLocations = locations => {
-    return locations.filter(x => x.unitaryAuthArea === 'Devon');
+  return locations.filter(x => x.unitaryAuthArea === 'Devon');
 };
+//# sourceMappingURL=data.js.map
